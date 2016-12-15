@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :author %>
-    <%= f.text_field :author %>
+    <%= f.label :user_id, 'Author' %><br>
+    <%= f.collection_select :user_id, User.all, :id, :name %>
   </div>
 
   <div class="field">
-    <%= f.label :title %>
+    <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.label :content %><br>
+    <%= f.text_area :content, rows: 12, cols: 80 %>
   </div>
 
   <div class="actions">
